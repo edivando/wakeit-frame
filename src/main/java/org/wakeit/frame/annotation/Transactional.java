@@ -1,0 +1,46 @@
+/*
+ * @version     1.0.0
+ * @author      Edivando J. Alves
+ * @contact     edivando@rocketti.com.br ( http://www.rocketti.com.br )
+ * 
+ * @copyright  	Copyright 2017 RocketTi Solutions, all rights reserved.
+ * 
+ */
+package org.wakeit.frame.annotation;
+
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
+import java.lang.annotation.Inherited;
+import java.lang.annotation.Retention;
+import java.lang.annotation.Target;
+
+import javax.enterprise.util.Nonbinding;
+import javax.interceptor.InterceptorBinding;
+
+/**
+ * Class Transactional
+ *
+ * @author edivandoalves
+ * @date Aug 12, 2017
+ * 
+ * 
+ */
+@Inherited
+@InterceptorBinding
+@Target({TYPE, METHOD})
+@Retention(RUNTIME)
+public @interface Transactional {
+    public enum TxType {
+        REQUIRED, REQUIRES_NEW, MANDATORY, SUPPORTS, NOT_SUPPORTED, NEVER
+    }
+
+    TxType value() default TxType.REQUIRED;
+
+    @Nonbinding
+    public Class[] rollbackOn() default {};
+
+    @Nonbinding
+    public Class[] dontRollbackOn() default {};
+}
