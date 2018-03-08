@@ -62,6 +62,20 @@
 		    <version>2.4.4.Final</version>
 		</dependency>
 		
+		<!-- JWT -->
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.6.0</version>
+		</dependency>
+		
+		<!-- Joda Time -->
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.9.3</version>
+		</dependency>
+		
   	</dependencies>
   
 </project>
