@@ -1,9 +1,9 @@
 /*
  * @version     1.0.0
  * @author      Edivando J. Alves
- * @contact     edivando@rocketti.com.br ( http://www.rocketti.com.br )
+ * @contact     edivando@wakeit.org ( http://www.wakeit.org )
  * 
- * @copyright  	Copyright 2017 RocketTi Solutions, all rights reserved.
+ * @copyright  	Copyright 2018 Wake It Solutions, all rights reserved.
  * 
  */
 package org.wakeit.frame.util;
