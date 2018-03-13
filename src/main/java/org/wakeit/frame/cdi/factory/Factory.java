@@ -18,5 +18,6 @@ package org.wakeit.frame.cdi.factory;
  */
 public class Factory {
 	
+	
 
 }

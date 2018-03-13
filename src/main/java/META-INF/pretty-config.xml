@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  
+	@version     1.0.0
+	@author      Edivando J. Alves
+	@contact     edivando@wakeit.org ( http://www.wakeit.org )
+	
+	@copyright Copyright 2018 Wake It Solutions, all rights reserved.
+-->
+<pretty-config xmlns="http://ocpsoft.org/schema/rewrite-config-prettyfaces" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://ocpsoft.org/schema/rewrite-config-prettyfaces
+                      http://ocpsoft.org/xml/ns/prettyfaces/rewrite-config-prettyfaces.xsd">
+
+	<!-- Public Pages -->
+	<url-mapping id="index">
+		<pattern value="/" />
+		<view-id value="/index.html" />
+	</url-mapping>
+	<url-mapping id="sitemap">
+		<pattern value="/sitemap/" />
+		<view-id value="/sitemap.xml" />
+	</url-mapping>
+	
+	<!-- Error Pages -->
+	<url-mapping id="503">
+		<pattern value="/503/" />
+		<view-id value="/pages/erro/erro503.html" />
+	</url-mapping>
+	<url-mapping id="500">
+		<pattern value="/500/" />
+		<view-id value="/pages/erro/erro500.html" />
+	</url-mapping>
+	<url-mapping id="404">
+		<pattern value="/404/" />
+		<view-id value="/pages/erro/erro404.html" />
+	</url-mapping>
+	<url-mapping id="401">
+		<pattern value="/401/" />
+		<view-id value="/pages/erro/erro401.html" />
+	</url-mapping>
+	<url-mapping id="acessoNegado">
+		<pattern value="/acessoNegado/" />
+		<view-id value="/pages/erro/acessoNegado.html" />
+	</url-mapping>
+	
+	<!-- Private Pages -->
+	<url-mapping id="home">
+		<pattern value="/home/" />
+		<view-id value="/home.html" />
+	</url-mapping>
+
+</pretty-config>

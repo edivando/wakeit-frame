@@ -6,7 +6,7 @@
  * @copyright  	Copyright 2018 Wake It Solutions, all rights reserved.
  * 
  */
-package org.wakeit.frame.helper;
+package org.wakeit.frame.cdi.helper;
 
 import java.io.Serializable;
 import java.text.MessageFormat;
@@ -19,8 +19,7 @@ import javax.inject.Inject;
 
 import org.primefaces.context.RequestContext;
 import org.wakeit.frame.exception.BasicException;
-
-import lombok.Getter;
+import org.wakeit.frame.model.enun.MessageSeverity;
 
 /**
  * 
@@ -32,25 +31,13 @@ public class Messages implements Serializable {
 	
 	private static final long serialVersionUID = 478623747197540209L;
 	
-	private static final String BUNDLE_MESSAGES = "br.com.rocketti.i18n.messages";
+	private static final String BUNDLE_MESSAGES = "org.wakeit.i18n.messages";
 	
 	@Inject
 	private FacesContext context;
-	
-	public enum Severity{ 
-		INFO("info"), SUCCESS("success"), WARNING("warning"), ERROR("error");
-		
-		@Getter
-		private final String method;
-		
-		private Severity(String method) {
-			this.method = method;
-		}
-	}
 
-
-	public void show(Severity severity, String title, String key, String...param) {
-		execute("toastr."+severity.method+"('"+formatMessage(key, param)+"', '"+formatMessage(title)+"');");
+	public void show(MessageSeverity severity, String title, String key, String...param) {
+		execute("toastr."+severity.getMethod()+"('"+formatMessage(key, param)+"', '"+formatMessage(title)+"');");
 	}
 	
 	public void show(BasicException e) {
