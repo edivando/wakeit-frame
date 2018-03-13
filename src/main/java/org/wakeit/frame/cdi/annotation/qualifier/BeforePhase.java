@@ -6,7 +6,7 @@
  * @copyright  	Copyright 2018 Wake It Solutions, all rights reserved.
  * 
  */
-package org.wakeit.frame.annotation.qualifier;
+package org.wakeit.frame.cdi.annotation.qualifier;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -26,6 +26,6 @@ import javax.inject.Qualifier;
 @Qualifier
 @Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface AfterPhase {
+public @interface BeforePhase {
 
 }

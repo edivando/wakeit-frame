@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	@version     1.0.0
+	@author      Edivando J. Alves
+	@contact     edivando@wakeit.org ( http://www.wakeit.org )
+	
+	@copyright Copyright 2018 Wake It Solutions, all rights reserved.
+ -->
+<Context>
+    <Resource name="BeanManager"
+        auth="Container"
+        type="javax.enterprise.inject.spi.BeanManager"
+        factory="org.jboss.weld.resources.ManagerObjectFactory"/>
+</Context>
+
+

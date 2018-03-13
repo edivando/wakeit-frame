@@ -6,7 +6,7 @@
  * @copyright  	Copyright 2018 Wake It Solutions, all rights reserved.
  * 
  */
-package org.wakeit.frame.annotation;
+package org.wakeit.frame.cdi.annotation;
 
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.TYPE;

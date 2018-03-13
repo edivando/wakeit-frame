@@ -6,7 +6,7 @@
  * @copyright  	Copyright 2018 Wake It Solutions, all rights reserved.
  * 
  */
-package org.wakeit.frame.annotation.factory;
+package org.wakeit.frame.cdi.factory;
 
 /**
  * Class Factory
@@ -18,6 +18,5 @@ package org.wakeit.frame.annotation.factory;
  */
 public class Factory {
 	
-
 
 }

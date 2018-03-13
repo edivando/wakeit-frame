@@ -6,14 +6,14 @@
  * @copyright  	Copyright 2018 Wake It Solutions, all rights reserved.
  * 
  */
-package org.wakeit.frame.annotation.stereotype;
+package org.wakeit.frame.cdi.annotation.stereotype;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Stereotype;
 import javax.inject.Named;
 
@@ -27,9 +27,9 @@ import javax.inject.Named;
  */
 @Stereotype
 @Named
-@ApplicationScoped
+@SessionScoped
 @Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ApplicationModel {
+public @interface SessionModel {
 
 }

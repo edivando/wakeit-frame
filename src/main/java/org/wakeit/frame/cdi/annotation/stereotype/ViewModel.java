@@ -6,14 +6,16 @@
  * @copyright  	Copyright 2018 Wake It Solutions, all rights reserved.
  * 
  */
-package org.wakeit.frame.annotation.qualifier;
+package org.wakeit.frame.cdi.annotation.stereotype;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import javax.inject.Qualifier;
+import javax.enterprise.inject.Stereotype;
+import javax.faces.view.ViewScoped;
+import javax.inject.Named;
 
 /**
  * Class ViewModel
@@ -23,9 +25,11 @@ import javax.inject.Qualifier;
  * 
  * 
  */
-@Qualifier
-@Target(ElementType.PARAMETER)
+@Stereotype
+@Named
+@ViewScoped
+@Target({ElementType.TYPE, ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface BeforePhase {
+public @interface ViewModel {
 
 }
