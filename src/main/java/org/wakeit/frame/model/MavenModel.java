@@ -8,7 +8,9 @@
  */
 package org.wakeit.frame.model;
 
-import org.apache.maven.model.Model;
+import java.io.Serializable;
+
+import lombok.Data;
 
 /**
  * Class MavenProperties
@@ -18,9 +20,12 @@ import org.apache.maven.model.Model;
  * 
  * 
  */
-public class MavenModel extends Model {
+@Data
+public class MavenModel implements Serializable{
 
 	private static final long serialVersionUID = 4640154245552273151L;
 	
+	private String version;
+	private String artifactId;
 
 }

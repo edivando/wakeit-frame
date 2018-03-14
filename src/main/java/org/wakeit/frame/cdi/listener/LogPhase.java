@@ -10,10 +10,13 @@ package org.wakeit.frame.cdi.listener;
 
 import javax.enterprise.event.Observes;
 import javax.faces.event.PhaseEvent;
+import javax.inject.Inject;
 
 import org.wakeit.frame.cdi.annotation.qualifier.AfterPhase;
+import org.wakeit.frame.cdi.annotation.qualifier.Maven;
 import org.wakeit.frame.cdi.annotation.qualifier.Phase;
 import org.wakeit.frame.cdi.annotation.qualifier.Phase.Phases;
+import org.wakeit.frame.model.MavenModel;
 
 
 /**
@@ -25,9 +28,13 @@ import org.wakeit.frame.cdi.annotation.qualifier.Phase.Phases;
  * 
  */
 public class LogPhase {
+	
+	@Maven
+	@Inject
+	private MavenModel mavenModel;
 
 	public void log(@Observes @AfterPhase @Phase(Phases.RESTORE_VIEW) PhaseEvent phaseEvent) {
-		System.out.println("FASE: "+phaseEvent.getPhaseId());
+		System.out.println("["+mavenModel.getArtifactId().toUpperCase()+"]: "+phaseEvent.getPhaseId());
 	}
 	
 }

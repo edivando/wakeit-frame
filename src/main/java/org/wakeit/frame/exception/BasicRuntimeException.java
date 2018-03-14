@@ -8,6 +8,8 @@
  */
 package org.wakeit.frame.exception;
 
+import org.wakeit.frame.model.enun.MessageSeverity;
+
 import lombok.Getter;
 
 
@@ -23,21 +25,21 @@ public class BasicRuntimeException extends RuntimeException {
 	@Getter
 	private String title;
 	@Getter
-	private String severity;
+	private MessageSeverity severity;
 	
 	public BasicRuntimeException(String message){
 		this("", message, null);
 	}
 	
 	public BasicRuntimeException(String title, String message){
-		this(title, message, "ERROR", null);
+		this(title, message, MessageSeverity.ERROR, null);
 	}
 	
 	public BasicRuntimeException(String title, String message, Throwable e){
-		this(title, message, "ERROR", e);
+		this(title, message, MessageSeverity.ERROR, e);
 	}
 	
-	public BasicRuntimeException(String title, String message, String severity, Throwable e){
+	public BasicRuntimeException(String title, String message, MessageSeverity severity, Throwable e){
 		super(message, e);
 		this.title = title;
 		this.severity = severity;
