@@ -22,8 +22,8 @@ import org.wakeit.frame.layer.entity.BasicEntity;
  */
 public interface CrudData<E extends BasicEntity> extends Serializable {
 	
-	public E save(E payment) throws DataException;
+	public E save(E entity) throws DataException;
 		
-	public void delete(E payment) throws DataException;
+	public void delete(E entity) throws DataException;
 
 }

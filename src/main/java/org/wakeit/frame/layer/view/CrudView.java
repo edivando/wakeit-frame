@@ -68,6 +68,10 @@ public abstract class CrudView<E extends BasicEntity> extends BasicView{
 	public abstract List<E> loadEntitys();
 	
 	public abstract E getEntity();
+	
+	public abstract void save();
+	
+	public abstract void remove(E entity);
 
 	public void form(){
 		form = true;
