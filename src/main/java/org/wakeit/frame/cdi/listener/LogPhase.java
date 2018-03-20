@@ -34,7 +34,7 @@ public class LogPhase {
 	private MavenModel mavenModel;
 
 	public void log(@Observes @AfterPhase @Phase(Phases.RESTORE_VIEW) PhaseEvent phaseEvent) {
-		System.out.println("["+mavenModel.getArtifactId().toUpperCase()+"]: "+phaseEvent.getPhaseId());
+		System.out.println("["+mavenModel.getArtifactId().toUpperCase()+"]=> "+phaseEvent.getPhaseId());
 	}
 	
 }
