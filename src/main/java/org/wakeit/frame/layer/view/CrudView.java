@@ -51,7 +51,7 @@ public abstract class CrudView<E extends BasicEntity> extends BasicView{
 	}
 	
 	@PostConstruct
-	public void init(){
+	private void init(){
 		entitys = loadEntitys();
 	}
 	
