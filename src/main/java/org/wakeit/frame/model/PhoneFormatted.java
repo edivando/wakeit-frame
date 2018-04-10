@@ -8,14 +8,12 @@
  */
 package org.wakeit.frame.model;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
+@Data
 public class PhoneFormatted {
 	
-	@Getter @Setter
 	private String ddd;
-	@Getter @Setter
 	private String number;
 	
 	public PhoneFormatted(String ddd, String number) {

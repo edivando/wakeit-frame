@@ -89,17 +89,23 @@ public abstract class BasicDao<T extends BasicEntity, I> implements Serializable
 	
 	
 	protected TypedQuery<T> createNamedQuery(String namedQuery) {
+		if(namedQuery.contains(" ")) {
+			throw new RuntimeException("Not NamedQuery");
+		}
 		return getManager().createNamedQuery(namedQuery, getClazz());
+	}
+	
+	protected <E> TypedQuery<E> createNamedQuery(String query, Class<E> clazz) {
+		return getManager().createNamedQuery(query, clazz);
 	}
 	
 	protected TypedQuery<T> createQuery(String query) {
 		return getManager().createQuery(query, getClazz());
 	}
 	
-	protected TypedQuery<?> createQuery(String query, Class<?> clazz) {
+	protected <E> TypedQuery<E> createQuery(String query, Class<E> clazz) {
 		return getManager().createQuery(query, clazz);
 	}
-	
 	
 	
 }

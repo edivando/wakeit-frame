@@ -14,8 +14,8 @@ import java.io.Serializable;
 
 /**
  * 
- * @author Edivando Alves
- * @date  10/02/2016
+ * @author edivandoalves
+ * @date Mar 31, 2018
  * 
  */
 public abstract class BasicView implements Serializable {

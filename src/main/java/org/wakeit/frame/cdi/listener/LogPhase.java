@@ -9,6 +9,7 @@
 package org.wakeit.frame.cdi.listener;
 
 import javax.enterprise.event.Observes;
+import javax.faces.component.UIViewRoot;
 import javax.faces.event.PhaseEvent;
 import javax.inject.Inject;
 
@@ -34,7 +35,10 @@ public class LogPhase {
 	private MavenModel mavenModel;
 
 	public void log(@Observes @AfterPhase @Phase(Phases.RESTORE_VIEW) PhaseEvent phaseEvent) {
-		System.out.println("["+mavenModel.getArtifactId().toUpperCase()+"]=> "+phaseEvent.getPhaseId());
+		UIViewRoot viewRoot = phaseEvent.getFacesContext().getViewRoot();
+		if(viewRoot != null) {
+			System.out.println("["+mavenModel.getArtifactId().toUpperCase()+"]=> "+viewRoot.getViewId());
+		}
 	}
 	
 }

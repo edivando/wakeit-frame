@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
 <!--  
 	@version     1.0.0
 	@author      Edivando J. Alves
@@ -6,11 +7,11 @@
 	
 	@copyright Copyright 2018 Wake It Solutions, all rights reserved.
 -->
-<pretty-config xmlns="http://ocpsoft.org/schema/rewrite-config-prettyfaces" 
+<!-- <pretty-config xmlns="http://ocpsoft.org/schema/rewrite-config-prettyfaces" 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
   xsi:schemaLocation="http://ocpsoft.org/schema/rewrite-config-prettyfaces
-                      http://ocpsoft.org/xml/ns/prettyfaces/rewrite-config-prettyfaces.xsd">
-
+                      http://ocpsoft.org/xml/ns/prettyfaces/rewrite-config-prettyfaces.xsd"> -->
+<pretty-config xmlns="http://ocpsoft.org/prettyfaces/3.3.3">
 	<!-- Public Pages -->
 	<url-mapping id="index">
 		<pattern value="/" />

@@ -8,6 +8,8 @@
  */
 package org.wakeit.frame.exception;
 
+import org.wakeit.frame.model.ExceptionJson;
+
 import lombok.Getter;
 
 /**
@@ -56,7 +58,10 @@ public class ServiceException extends BasicException {
 	public ServiceException(int code, String title, String message, Throwable e){
 		super(title, message, e);
 		this.code = code;
-//		new AppSystemBug().title(getClass().getSimpleName()+code+" - "+title).erro(e).save();
+	}
+	
+	public String toJSON(){
+		return new ExceptionJson(code, getMessage(), getTitle()).toJSON();
 	}
 	
 }
