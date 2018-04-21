@@ -8,8 +8,6 @@
  */
 package org.wakeit.frame.model.enun;
 
-import lombok.Getter;
-
 /**
  * Class Severity
  *
@@ -18,14 +16,14 @@ import lombok.Getter;
  * 
  * 
  */
-public enum MessageSeverity {
-	INFO("info"), SUCCESS("success"), WARNING("warning"), ERROR("error");
-	
-	@Getter
-	private final String method;
-	
-	private MessageSeverity(String method) {
-		this.method = method;
-	}
-	
-}
+//public enum MessageSeverity {
+//	INFO("info"), SUCCESS("success"), WARNING("warning"), ERROR("error");
+//	
+//	@Getter
+//	private final String method;
+//	
+//	private MessageSeverity(String method) {
+//		this.method = method;
+//	}
+//	
+//}

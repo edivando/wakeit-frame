@@ -18,8 +18,8 @@ import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
 import org.primefaces.context.RequestContext;
-import org.wakeit.frame.exception.BasicException;
-import org.wakeit.frame.model.enun.MessageSeverity;
+import org.wakeit.util.exception.BasicException;
+import org.wakeit.util.model.MessageSeverity;
 
 /**
  * 

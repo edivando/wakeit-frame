@@ -8,6 +8,8 @@
  */
 package org.wakeit.frame.exception;
 
+import org.wakeit.util.exception.BasicRuntimeException;
+
 import lombok.Getter;
 
 /**

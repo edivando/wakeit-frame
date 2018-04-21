@@ -9,6 +9,7 @@
 package org.wakeit.frame.exception;
 
 import org.wakeit.frame.model.ExceptionJson;
+import org.wakeit.util.exception.BasicException;
 
 import lombok.Getter;
 

@@ -8,8 +8,8 @@
  */
 package org.wakeit.frame.exception;
 
-import org.wakeit.frame.exception.BasicException;
-import org.wakeit.frame.model.enun.MessageSeverity;
+import org.wakeit.util.exception.BasicException;
+import org.wakeit.util.model.MessageSeverity;
 
 import lombok.Getter;
 

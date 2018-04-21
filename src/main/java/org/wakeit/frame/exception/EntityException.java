@@ -8,6 +8,8 @@
  */
 package org.wakeit.frame.exception;
 
+import org.wakeit.util.exception.BasicException;
+
 /**
  * 
  * @author Edivando Alves
