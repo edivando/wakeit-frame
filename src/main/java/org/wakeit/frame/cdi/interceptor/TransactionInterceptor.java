@@ -17,7 +17,6 @@ import javax.interceptor.InvocationContext;
 import javax.persistence.EntityManager;
 
 import org.wakeit.frame.cdi.annotation.Transactional;
-import org.wakeit.frame.exception.DAOException;
 
 /**
  * Class Transaction
@@ -38,7 +37,7 @@ public class TransactionInterceptor implements Serializable{
 	public EntityManager manager;
 	
 	@AroundInvoke
-	public Object execute(InvocationContext context) throws DAOException {
+	public Object execute(InvocationContext context) throws Exception {
 		try {
 			manager.getTransaction().begin();
 			Object result = context.proceed();
@@ -46,7 +45,7 @@ public class TransactionInterceptor implements Serializable{
 			return result;
 		} catch (Exception e) {
 			manager.getTransaction().rollback();
-			throw new DAOException(e.getMessage(), e);
+			throw e;
 		}
 	}
 
